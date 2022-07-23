@@ -51,7 +51,8 @@ public class ProductsPage extends BasePage{
         click(contiuneShoppingButton);
 
     }
-    public void viewCart(){
+    public CartPage viewCart(){
         click(viewCartbutton);
+        return new CartPage(driver);
     }
 }

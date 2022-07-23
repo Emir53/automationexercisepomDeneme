@@ -8,9 +8,7 @@ public class BasePage {
     WebDriver driver;
 
     public BasePage(WebDriver driver){
-
         this.driver=driver;
-
     }
 
 
@@ -21,7 +19,6 @@ public class BasePage {
     public List<WebElement> findAll(By locator){
         return driver.findElements(locator);
     }
-
 
     public void click(By Locator){
         find(Locator).click();
