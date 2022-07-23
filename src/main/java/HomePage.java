@@ -1,3 +1,4 @@
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,23 +18,27 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    public void clickLoginPage(){
+    public LoginPage clickLoginPage(){
         click(goToLoginPage);
+        return new LoginPage(driver);
     }
-    public void clickTestCasesPage(){
+    public TestCasesPage clickTestCasesPage(){
         click(goToTestCasesPage);
+        return new TestCasesPage(driver);
     }
 
-    public void clickProductsPage(){
+    public ProductsPage clickProductsPage(){
         click(goToProductsPage);
+        return new ProductsPage(driver);
     }
 
     public boolean isOnHomepage(){
         return isDisplayed(checkIfHomepage);
     }
 
-    public void logOut(){
+    public LoginPage logOut(){
         click(LogOutButton);
+        return new LoginPage(driver);
     }
 
 
